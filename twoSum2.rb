@@ -15,6 +15,3 @@ def two_sum(numbers, target)
     end
   end
 end
-
-numbers = [2, 7, 11, 15]
-p two_sum(numbers, 9)
