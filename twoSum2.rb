@@ -3,7 +3,6 @@
 # @return {Integer[]}
 # Input: numbers={2, 7, 11, 15}, target=9
 # Output: index1=1, index2=2
-require 'Set'
 
 def two_sum(numbers, target)
   seen = Hash.new

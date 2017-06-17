@@ -21,7 +21,7 @@ def length_of_longest_substring(s)
 end
 
 
-puts length_of_longest_substring('cat') == 3
+puts length_of_longest_substring('dvdf')
 puts length_of_longest_substring('abcabcbb') == 3
 puts length_of_longest_substring('bbbbb') == 1
 puts length_of_longest_substring('pwwkew') == 3
