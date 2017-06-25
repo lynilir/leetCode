@@ -4,17 +4,17 @@
 require 'Set'
 
 def length_of_longest_substring(s)
-  seen = Set.new
+  last_seen = Hash.new { |h, key| h[key] = 0 }
   longest = 0
-  curLength = 0
-  s.each_char do |char|
-    if seen.include?(char)
-      curLength = 1
+  start = 0
+  s.chars.each_with_index do |char, i|
+    if last_seen[char] && start <= last_seen[char]
+      start = last_seen[char] + 1
     else
-      seen << char
-      curLength += 1
-      longest = curLength if curLength > longest
+      longest = [longest, i - start + 1].max
     end
+
+    last_seen[char] = i
   end
 
   return longest
