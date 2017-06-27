@@ -1,7 +1,6 @@
 # @param {String} s
 # @return {Integer}
 
-require 'Set'
 
 def length_of_longest_substring(s)
   last_seen = Hash.new { |h, key| h[key] = 0 }
